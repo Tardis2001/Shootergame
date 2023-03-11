@@ -80,7 +80,7 @@ int main(int argc, char const *argv[])
     
     al_start_timer(timer);
     
-    font = al_load_font("IsWasted.ttf",18,0);
+    font = al_load_font("assets/fonts/IsWasted.ttf",18,0);
 
         
     while (playing)
@@ -230,14 +230,14 @@ int init(){
         cout <<"Falha ao iniciar al_init_image_addon!" << endl;
         return -1;
     }
-    mapa = al_load_bitmap("map.bmp");
+    mapa = al_load_bitmap("assets/images/map.bmp");
     if(!mapa)
     {
         cout << "Falha ao carregar o mapa!" << endl;
         al_destroy_display(display);
         return -1;
     }
-    player_idle = al_load_bitmap("player.bmp");
+    player_idle = al_load_bitmap("assets/images/player.bmp");
 
     if(!player_idle)
     {
@@ -245,7 +245,7 @@ int init(){
         al_destroy_display(display);
         return -1;
     }
-    player_right = al_load_bitmap("player_right.bmp");
+    player_right = al_load_bitmap("assets/images/player_right.bmp");
     if(!player_right)
     {
         cout << "Falha ao carregar o mapa!" << endl;
@@ -253,21 +253,21 @@ int init(){
         return -1;
     }
 
-    player_left = al_load_bitmap("player_left.bmp");
+    player_left = al_load_bitmap("assets/images/player_left.bmp");
     if(!player_left)
     {
         cout << "Falha ao carregar o player!" << endl;
         al_destroy_display(display);
         return -1;
     }
-    Bullet_image = al_load_bitmap("bullet.bmp");
+    Bullet_image = al_load_bitmap("assets/images/bullet.bmp");
     if(!Bullet_image)
     {
         cout << "Falha ao carregar a bala!" << endl;
         al_destroy_display(display);
         return -1;
     }
-    enemy = al_load_bitmap("bigorna.bmp");
+    enemy = al_load_bitmap("assets/images/bigorna.bmp");
     if (!enemy)
     {
         cout << "Falha ao carregar a bigorna" << endl;
